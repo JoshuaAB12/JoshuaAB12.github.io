@@ -1,9 +1,13 @@
 * {
   box-sizing: border-box;
 }
-
 body {
-    background: rgb(126, 208, 255);
+  background-image: url('Snowflake.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body {
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: Arial, sans-serif;
