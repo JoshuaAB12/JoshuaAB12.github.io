@@ -181,8 +181,8 @@ h3 {
 /*---------------Crochet html drop down menu-------------------*/
 
 #Crochet {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -208,19 +208,8 @@ main ul li details img {
   border-radius: 8px;
 }
 
-
 main ul li details > div {
-  display: grid;
-  grid-template-rows: 0fr;
   overflow: hidden;
-  transition: grid-template-rows 0.8s ease-in-out;
-}
-
-main ul li details[open] > div {
-  grid-template-rows: 1fr;
-}
-
-main ul li details > div > div {
-  min-height: 0;
-  overflow: hidden;
+  height: 0;
+  transition: height 0.8s ease-in-out;
 }

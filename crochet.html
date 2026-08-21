@@ -13,14 +13,15 @@
     <nav>
       <h1>HeartYarn</h1>
       <ul id="nav-ul">
-        <li class="nav-li">
-          <a class="button" href="crochet.html">Crochet</a>
-        </li>
+        
         <li class="nav-li">
           <a class="button" href="index.html">Home</a>
         </li>
         <li class="nav-li">
           <a class="button" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-li">
+          <a class="button" href="crochet.html">Crochet</a>
         </li>
       </ul>
 
@@ -36,42 +37,77 @@
           <li>
             <details>
               <summary>Scarfs</summary>
-              <div>
-                <div>
-            
-              <p>In 2023 I made my first scarf using a loom tool.</p>
-              <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
-                alt="A knitted scarf">
-                </div>
+              <div class="dropdown-content">
+                <p>In 2023 I made my first scarf using a loom tool.</p>
+                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
+                  alt="A knitted scarf">
               </div>
             </details>
           </li>
           <li>
             <details>
               <summary>Plushies</summary>
-              <p>Overtime I have sold of many kinds of plushies.</p>
-              <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
-                alt="A knitted scarf">
+              <div class="dropdown-content">
+                <p>Overtime I have sold of many kinds of plushies.</p>
+                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
+                  alt="A knitted scarf">
+              </div>
             </details>
           </li>
           <li>
             <details>
               <summary>Flowers</summary>
-              <p>Flowers are quite unique and often require some special technicques to make, but are incredibily rewarding.</p>
-              <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
-                alt="A knitted scarf">
+              <div class="dropdown-content">
+                <p>Flowers are quite unique and often require some special technicques to make, but are incredibily
+                  rewarding.</p>
+                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
+                  alt="A knitted scarf">
+              </div>
             </details>
           </li>
           <li>
             <details>
               <summary>Clothing</summary>
-              <p>A field of crochet I hav just begun experimenting in.</p>
-              <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
-                alt="A knitted scarf">
+              <div class="dropdown-content">
+                <p>A field of crochet I have just begun experimenting in.</p>
+                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80"
+                  alt="A knitted scarf">
+              </div>
             </details>
           </li>
 
         </ul>
+        <script>
+          document.querySelectorAll("main details").forEach((menu) => {
+            const content = menu.querySelector(".dropdown-content");
+
+            menu.addEventListener("toggle", () => {
+              if (menu.open) {
+                content.style.height = "0px";
+                requestAnimationFrame(() => {
+                  content.style.height = `${content.scrollHeight}px`;
+                });
+              }
+            });
+
+            menu.querySelector("summary").addEventListener("click", (event) => {
+              if (!menu.open) return;
+
+              event.preventDefault();
+              content.style.height = `${content.scrollHeight}px`;
+              requestAnimationFrame(() => {
+                content.style.height = "0px";
+              });
+              content.addEventListener("transitionend", () => {
+                menu.open = false;
+              }, { once: true });
+            });
+
+            content.addEventListener("transitionend", () => {
+              if (menu.open) content.style.height = "auto";
+            });
+          });
+        </script>
         <!--ASD Projects will go here love-->
 
       </div>
