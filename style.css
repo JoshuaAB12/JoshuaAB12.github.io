@@ -2,99 +2,98 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url('Snowflake.jpg');
+  background-image: url("Snowflake.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 body {
-    color: rgb(72, 154, 241);
-    padding: 10px;
-    font-family: Arial, sans-serif;
+  color: rgb(72, 154, 241);
+  padding: 10px;
+  font-family: Arial, sans-serif;
 }
 
 #all-contents {
-    max-width: 800px;
-    margin: auto;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* navigation menu */
+/* ----------------navigation menu---------------- */
 nav {
-    background: rgb(255, 136, 231);
-    margin: 0 auto;
-    display: flex;
-    padding: 10px;
+  background: rgb(255, 136, 231);
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
 }
 
 h1 {
-    display: flex;
-    align-items: center;
-    color: white;
-    flex: 1;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex: 1;
+  margin: 0;
 }
 
 h2 {
-    display: flex;
-    align-items: center;
-    color:rgb(255, 177, 247);
-    flex: 1;
-    margin: 0;
-
-    
+  display: flex;
+  align-items: center;
+  color: rgb(255, 177, 247);
+  flex: 1;
+  margin: 0;
 }
 
 #nav-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .nav-li {
-    display: inline-block;
-    padding: 0 10px;
+  display: inline-block;
+  padding: 0 10px;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family:courier;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: courier;
 }
 
-/* main container area beneath menu */
+/* ----------------main container area beneath menu---------------- */
 main {
-    background: rgb(253, 254, 255);
-    display: flex;
-    margin-top: 20px;
+  background: rgb(253, 254, 255);
+  display: flex;
+  margin-top: 20px;
 }
 
 .sidebar {
-    margin-right: 25px;
-    padding: 10px;
+  margin-right: 25px;
+  padding: 10px;
 }
 
 .sidebar-img {
-    width: 200px;
+  width: 200px;
 }
 
 .content {
-    flex: 1;
-    padding: 15px;
+  flex: 1;
+  padding: 15px;
 }
 
-/* interests section styles */
+/* -----------------interests section styles--------------- */
 #interests {
-    border: 4px rgb(201, 233, 255) solid;
-    padding: 8px;
-    margin-top: 20px;
+  border: 4px rgb(201, 233, 255) solid;
+  padding: 8px;
+  margin-top: 20px;
 }
 
-h2, h3 {
-    margin: 0px;
+h2,
+h3 {
+  margin: 0px;
 }
 
-/*My added code*/
+/*--------------------My added code---------------------*/
 .button {
   display: inline-block;
   padding: 10px 16px;
@@ -110,16 +109,16 @@ h2, h3 {
 }
 /*about me stuff*/
 .About {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 50px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 50px;
 }
 #about {
-    border: 4px rgb(255, 177, 247) solid;
-    padding: 20px;
-    margin-top: 20px;
+  border: 4px rgb(255, 177, 247) solid;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 /*--------------------------------------*/
@@ -156,7 +155,10 @@ h2, h3 {
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 #portfolio a:hover {
@@ -176,4 +178,49 @@ h2, h3 {
 #portfolio a:hover::after {
   opacity: 1;
 }
+/*---------------Crochet html drop down menu-------------------*/
 
+#Crochet {
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+}
+
+main ul li details {
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+main ul li summary {
+  cursor: pointer;
+  color: rgb(72, 154, 241);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+main ul li details img {
+  display: block;
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+main ul li details > div {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.8s ease-in-out;
+}
+
+main ul li details[open] > div {
+  grid-template-rows: 1fr;
+}
+
+main ul li details > div > div {
+  min-height: 0;
+  overflow: hidden;
+}
