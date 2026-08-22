@@ -4,7 +4,7 @@
 body {
   background-image: url("Snowflake.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
 }
 body {
@@ -202,8 +202,8 @@ main ul li summary {
 
 main ul li details img {
   display: block;
-  width: 140px;
-  height: 100px;
+  width: 420px;
+  height: 300px;
   object-fit: cover;
   border-radius: 8px;
 }
