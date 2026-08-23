@@ -71,7 +71,7 @@ $(function () {
     createBadPlatform(310,700,1100,60,"red")
 
     // moving Platforms
-    createPlatform(600, 650, 200, 10, "yellow", 500, 1300, 2, 200, 700, 0)
+    createPlatform(600, 650, 300, 10, "yellow", 500, 1300, 3, 200, 700, 0)
     createPlatform(900,500,100,10, "yellow", 0,900,0, 200, 500, 2)
 
     // different sized projectiles
