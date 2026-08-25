@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <title>Bouncing Box</title>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/2088769817582993408/en8Hzwiz.jpg">
     <script src="jquery.min.js"></script>
     <style>
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        background-color: rgb(97, 144, 255);
         font-size: 300%;
+        font-family: impact;
         text-align: center;
         user-select: none;
         display: block;
@@ -28,7 +30,10 @@
 
   <body class="board">
     <!-- HTML for the box -->
-    <div class="box">?</div>
+    <div class="box">0</div>
+    <style>
+      .board { background-color: rgb(187, 236, 255);}
+    </style>
 
     <script>
       (function () {
@@ -55,8 +60,9 @@
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        function moveBoxTo(newPositionX,newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
 
         // changes the text displayed on the Box
@@ -69,9 +75,16 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
+        var positionX = 0;
+        var points = 1;
+        var speed = 0;
 
+        var positionY = 0;
+        var speedY = 0;
+        var boardHeight = jQuery(window).height();
 
-
+        var randNum = Math.random() * 100;
+        
 
 
         /**
@@ -80,7 +93,14 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
+         positionX += speed
+         positionY += speedY
+         moveBoxTo(positionX, positionY);//Moves box to that x position
+         if (positionX > boardWidth) {speed *= -1; }
+         if (positionX < 0) {speed *= -1 }
 
+         if (positionY > boardHeight) {speedY *= -1; }
+         if (positionY < 0) {speedY *= -1 }
         
 
           
@@ -94,6 +114,15 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+          speed += 1*points + 10
+          positionX = randNum
+          changeBoxText(points)
+          points += 1
+
+          speedY += 1*points + 10
+          positionY = randNum
+
+          
 
 
 

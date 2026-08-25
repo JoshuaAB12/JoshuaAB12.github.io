@@ -42,12 +42,12 @@ $(function () {
     // actual platforms
     createPlatform(300,150,10,600, "white")
     createPlatform(100,0,10,600, "white")
-    createPlatform(100,600,50,10, "red")
-    createPlatform(290,700,10,10, "white")
+    createPlatform(100,600,50,10, "blue")
+    createPlatform(290,700,10,10, "blue")
     createPlatform(400,600,100,10, "green")
-    createPlatform(100,470,50,10, "red")
-    createPlatform(200,340,50,10, "red")
-    createPlatform(100,210,50,10, "red")
+    createPlatform(100,470,50,10, "blue")
+    createPlatform(200,340,50,10, "blue")
+    createPlatform(100,210,50,10, "blue")
     createPlatform(1100,550,300,10, "green")
 
 
