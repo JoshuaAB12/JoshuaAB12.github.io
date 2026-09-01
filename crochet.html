@@ -77,7 +77,7 @@
         </ul>
         <script>
           document.querySelectorAll("main details").forEach((menu) => {
-            const content = menu.querySelector(".dropdown-content");
+            const content = menu.querySelector(".dropdown-content"); //okay this stuff classifies it as a dropdown//
 
             menu.addEventListener("toggle", () => {
               if (menu.open) {
@@ -89,7 +89,7 @@
             });
 
             menu.querySelector("summary").addEventListener("click", (event) => {
-              if (!menu.open) return;
+              if (!menu.open) return; //if thingy clicked, thingy open//
 
               event.preventDefault();
               content.style.height = `${content.scrollHeight}px`;

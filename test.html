@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TESTINGGGG</title>
+
+  <link rel="icon" href="https://pbs.twimg.com/profile_images/2088769817582993408/en8Hzwiz.jpg">
+</head>
+
+<body>
+  <div>
+    <nav>
+
+
+    </nav>
+  </div>
+
+  <div>
+    <main>
+
+      <canvas id="testshape" width="2250" height="1600">
+        <script>
+          const canvas = document.getElementById('testshape');
+          const ctx = canvas.getContext('2d');  // 2D drawing context; what do I mean by this? err I dunno
+          ctx.fillStyle = 'blue';
+          ctx.fillRect(10, 10, 100, 100);  // x, y, width, height: whats the difference you ask? well well well X and Y is where it is, whilst my lovely width and Height is the dimension of said object you IDIOT
+          //------------------------------//
+          ctx.fillStyle = 'red';
+          ctx.beginPath(); //what does this mean? double check
+          ctx.arc(200, 200, 50, 0, Math.PI * 2); //formate is x, y, radius, startAngle, end
+          ctx.fill(); //Guess what this does? IT ADDS COLOR DUH
+          //--------------------------// side note these lines clip weird fix that cuz
+          ctx.strokeStyle = 'green';
+          ctx.lineWidth = 20;
+          ctx.beginPath();
+          ctx.moveTo(400, 50); //start n ending pluh
+          ctx.lineTo(700, 700);
+          ctx.stroke();
+          //---------------------//
+          ctx.strokeStyle = 'purple';
+          ctx.lineWidth = 2;
+          ctx.fillStyle = 'orange';
+          ctx.beginPath();
+          ctx.moveTo(300, 100);
+          ctx.lineTo(350, 200);
+          ctx.lineTo(250, 200);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          //------------------//
+          ctx.strokeStyle = 'blue';
+          ctx.lineWidth = 2;
+          ctx.fillStyle = 'lightBlue';
+          ctx.beginPath();
+
+          
+          for (let x = 0; x < 2400; x++) { //x cord stuff
+          const y = 800 + Math.sin(x * 0.005) * 50; // Multiply by amplitude (50) and frequency (0.05)----------> basically const y == [y value] + math.sin(x*[frequency]) * [amplitude]
+          if (x === 0) { // Draw line from previous point to current point
+          ctx.moveTo(x, y);  // Start at first point
+          } else {
+          ctx.lineTo(x, y);  // Draw line to next point
+          }
+          ctx.stroke();
+          ctx.fill();
+}
+
+
+
+        </script>
+      </canvas>
+
+
+
+    </main>
+  </div>
+
+</body>
+
+</html>
