@@ -20,23 +20,25 @@
 
       <canvas id="testshape" width="2250" height="1600">
         <script>
+          
+          //----------------CUBE---------------//
           const canvas = document.getElementById('testshape');
           const ctx = canvas.getContext('2d');  // 2D drawing context; what do I mean by this? err I dunno
           ctx.fillStyle = 'blue';
           ctx.fillRect(10, 10, 100, 100);  // x, y, width, height: whats the difference you ask? well well well X and Y is where it is, whilst my lovely width and Height is the dimension of said object you IDIOT
-          //------------------------------//
+          //-----------CIRCLE---------------//
           ctx.fillStyle = 'red';
           ctx.beginPath(); //what does this mean? double check
           ctx.arc(200, 200, 50, 0, Math.PI * 2); //formate is x, y, radius, startAngle, end
           ctx.fill(); //Guess what this does? IT ADDS COLOR DUH
-          //--------------------------// side note these lines clip weird fix that cuz
+          //------------LINE--------------// side note these lines clip weird fix that cuz
           ctx.strokeStyle = 'green';
           ctx.lineWidth = 20;
           ctx.beginPath();
           ctx.moveTo(400, 50); //start n ending pluh
           ctx.lineTo(700, 700);
           ctx.stroke();
-          //---------------------//
+          //---------TRIANGLE------------//
           ctx.strokeStyle = 'purple';
           ctx.lineWidth = 2;
           ctx.fillStyle = 'orange';
@@ -47,12 +49,10 @@
           ctx.closePath();
           ctx.fill();
           ctx.stroke();
-          //------------------//
+          //--------SIN LINE----------//
           ctx.strokeStyle = 'blue';
           ctx.lineWidth = 2;
-          ctx.fillStyle = 'lightBlue';
           ctx.beginPath();
-
           
           for (let x = 0; x < 2400; x++) { //x cord stuff
           const y = 800 + Math.sin(x * 0.005) * 50; // Multiply by amplitude (50) and frequency (0.05)----------> basically const y == [y value] + math.sin(x*[frequency]) * [amplitude]
@@ -62,11 +62,52 @@
           ctx.lineTo(x, y);  // Draw line to next point
           }
           ctx.stroke();
+          }
+          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTION TO MAKE THEM FASTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+          //------CUBE------//
+          function cube(x1,x2,y1,y2) {
+            ctx.fillStyle = 'blue';
+          ctx.fillRect(x1,x2,y1,y2);
+          }
+          cube(300,400,200,100);
+        
+          //-----CIRCLE-----//
+          function circle(x,y,r,sa,end) {
+            ctx.fillStyle = 'red';
+          ctx.beginPath();
+          ctx.arc(x,y,r,sa, Math.PI * end);
+          ctx.fill()  
+          }
+          circle(500,700,50,0,5)
+          //-----LINE-----//
+          function line(x1,y1,x2,y2) {
+            ctx.strokeStyle = 'green';
+          ctx.lineWidth = 20;
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.stroke();
+          }
+          line(800,300,900,400);
+          //-----TRIANGLE/POLYLINES-----//
+          function triangle(mx,my,x1,y1,x2,y2) {
+            ctx.strokeStyle = 'purple';
+          ctx.lineWidth = 2;
+          ctx.fillStyle = 'orange';
+          ctx.beginPath();
+          ctx.moveTo(mx, my);
+          ctx.lineTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.closePath();
           ctx.fill();
-}
+          ctx.stroke();
+          }
+          triangle(800,1600,1000,1700,700,1000)
 
 
 
+
+          
         </script>
       </canvas>
 
