@@ -1,0 +1,50 @@
+// okay here I want to put notes detailing and explaining the actual stuff I have here so I can reference it later to ensure I can do this in the real world. We starting with HTML first.
+
+//~~~~~~~~~~~~~~~HTML CODE~~~~~~~~~~~~~~~//
+/* KEY: 
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+<link>
+
+<body>
+<nav>
+<main>
+<div>
+<h1>
+<p>
+<a href>
+<ul>
+<li>
+<img>
+
+*/
+
+//for basic html setup you are starting with <!DOCTYPE html>. This defines it as a HTML document.
+//Next up is <html></html> which is quite the back burner, you just put all your html related stuff in there. 
+
+//The <head></head> is where you put your title to name the document and links relating to ur css.
+// As just mentioned, the <title></title> is where you put your browser name.
+//<link rel href></link> is where you link to css/javascript. It can also be used to add an icon to your browser tab.
+
+//The <body></body> is after you finish your head, and it will contain your nav and main.
+//In <nav></nav> this gives you an area typically at the top of your screen, where you will link things for navigation. headers and stuff can be added here.
+//<main></main> is where all of your juciy stuff occurs; your images, your heading, your list, your paragraph, your everything really.
+//<div></div> is used to create seperations on pages, so that they are not grouped together. Think of it like pressing enter a few time to seperate paragraphs. To seperate these things into seperate blocks, you would divide the nav from the main.
+//<h1></h1> is just a header. the bigger the number the smaller the font.
+//<p></p> is just paragraphs.
+//<a href></a> anchors a link to a object or text, so that when click it takes you somewhere. Like a hyperlink.... BLOCKED?!?!??!?
+//<ul></ul> is used to establish a list is being formatted.
+//<li></li> is used to make a list in a ul element.
+//<img href></img> is used to make images.
+
+
+//~~~~~~~~~~~~~~~STYLE CSS CODE~~~~~~~~~~~~~~~//
+//important note about CSS: for the stuff you wish to edit, you can do so by directly quoting the element. What I mean by this is if you want to style your nav you would just start with nav {} 
+/* KEY:
+.class
+#id
+
+
+*/
