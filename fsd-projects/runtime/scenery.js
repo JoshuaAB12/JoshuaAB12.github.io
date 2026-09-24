@@ -40,6 +40,7 @@ const scenery = {
       { x: 700, width: 50, height: 150, speedX: -5 },
       { x: 900, width: 50, height: 150, speedX: -5 },
       { x: 1100, width: 50, height: 150, speedX: -5 },
+      { x: 1300, width: 50, height: 150, speedX: -5 },
     ],
   },
 };

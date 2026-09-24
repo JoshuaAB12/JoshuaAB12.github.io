@@ -127,8 +127,9 @@ let phase = 0;
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-   //xGrid("grey", 2, 0, 0, 2250, 0, 23);
-   //yGrid("grey", 2, 0, 0, 0, 1600, 24);
+   xGrid("grey", 2, 0, 0, 2250, 0, 23);
+   yGrid("grey", 2, 0, 0, 0, 1600, 24);
+   
   sinFill("	#4188ff", "#4188ff", 0, 900, 0.011, 10, phase);
   sinFill("	#649eff", "#649eff", 0, 920, 0.009, 20, phase);
   circle("#d1b65d",1400,1150,300,0,600);

@@ -55,3 +55,12 @@ nav {
   display: inline-block;
   padding: 0 10px;
 }
+#topText {
+  background: rgb(253, 254, 255);
+  display: flex;
+  margin-top: 20px;
+  margin-right: 25px;
+  padding: 30px;
+  width: 100px;
+
+}
