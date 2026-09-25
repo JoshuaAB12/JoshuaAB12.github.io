@@ -1,7 +1,7 @@
 function moveScenery() {
   for (let i = 0; i < scenery.building.instances.length; i++) {
     const buildingInstance = scenery.building.instances[i];
-    buildingInstance.x += buildingInstance.speedX + currentLevel.speed;
+    buildingInstance.x += buildingInstance.speedX - currentLevel.speed;
     if (buildingInstance.x + buildingInstance.width < 0) {
       buildingInstance.x = scenery.building.loopWidth;
     }
@@ -9,7 +9,7 @@ function moveScenery() {
 
   for (let i = 0; i < scenery.lamp.instances.length; i++) {
     const lampInstance = scenery.lamp.instances[i];
-    lampInstance.x += lampInstance.speedX + currentLevel.speed;
+    lampInstance.x += lampInstance.speedX - currentLevel.speed;
     if (lampInstance.x + lampInstance.width < 0) {
       lampInstance.x = scenery.lamp.loopWidth;
     }
